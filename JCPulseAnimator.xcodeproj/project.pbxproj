@@ -13,6 +13,7 @@
 		B03F5535220312990085CEB1 /* JCPulseShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */; };
 		B03F5537220314590085CEB1 /* JCPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F5536220314590085CEB1 /* JCPulseView.swift */; };
 		B03F5570220318AA0085CEB1 /* JCDisplayLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F556F220318AA0085CEB1 /* JCDisplayLinkManager.swift */; };
+		B03F5573220322450085CEB1 /* JCWaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F5572220322450085CEB1 /* JCWaveManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCPulseShapeLayer.swift; sourceTree = "<group>"; };
 		B03F5536220314590085CEB1 /* JCPulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCPulseView.swift; sourceTree = "<group>"; };
 		B03F556F220318AA0085CEB1 /* JCDisplayLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCDisplayLinkManager.swift; sourceTree = "<group>"; };
+		B03F5572220322450085CEB1 /* JCWaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCWaveManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */,
 				B03F5536220314590085CEB1 /* JCPulseView.swift */,
 				B03F556F220318AA0085CEB1 /* JCDisplayLinkManager.swift */,
+				B03F5572220322450085CEB1 /* JCWaveManager.swift */,
 			);
 			path = JCPulseAnimator;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				B03F5570220318AA0085CEB1 /* JCDisplayLinkManager.swift in Sources */,
 				B03F5535220312990085CEB1 /* JCPulseShapeLayer.swift in Sources */,
 				B03F5537220314590085CEB1 /* JCPulseView.swift in Sources */,
+				B03F5573220322450085CEB1 /* JCWaveManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
