@@ -29,5 +29,3 @@ internal class JCPulseShapeLayer: CAShapeLayer {
     }
     
 }
-
-//https://github.com/jmcur/JCPulseAnimator.git
