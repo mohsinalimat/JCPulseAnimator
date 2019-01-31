@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 internal class JCPulseShapeLayer: CAShapeLayer {
-    private var strokingColor: UIColor
-    private var fillingColor: UIColor
-    private var customLineWidth: CGFloat
+    private let strokingColor: UIColor
+    private let fillingColor: UIColor
+    private let customLineWidth: CGFloat
     
     init(withStrokeColor strokeColor: UIColor = UIColor.black, fillColor: UIColor = UIColor.clear, lineWidth: CGFloat = 3.0) {
         self.strokingColor = strokeColor
