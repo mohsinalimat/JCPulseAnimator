@@ -21,7 +21,9 @@ internal class JCPulseShapeLayer: CAShapeLayer {
         
         super.init()
         
-        
+        self.strokeColor = self.strokingColor.cgColor
+        self.fillColor = self.fillingColor.cgColor
+        self.lineWidth = self.customLineWidth
     }
     
     required init?(coder aDecoder: NSCoder) {
