@@ -19,7 +19,7 @@ public class JCDisplayLinkManager {
     
     var delegate: JCDisplayLinkManagerDelegate?
     
-    init() {
+    public init() {
         self.startTime = CFAbsoluteTimeGetCurrent()
         
         self.displayLink = CADisplayLink(target: self, selector: #selector(self.handleDisplayLink(displayLink:)))
