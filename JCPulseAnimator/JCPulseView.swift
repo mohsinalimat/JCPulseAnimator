@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-public class JCPulseView: UIView {
-    private var displayLink: CADisplayLink?
-    private var startTime: CFAbsoluteTime?
+public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
+    private let displayLinkManager: JCDisplayLinkManager
     private let pulseShapeLayer: JCPulseShapeLayer
     
     public init(withStrokeColor strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
+        self.displayLinkManager = JCDisplayLinkManager()
         self.pulseShapeLayer = JCPulseShapeLayer(
             withStrokeColor: strokeColor ?? UIColor.black,
             fillColor: fillColor ?? UIColor.clear,
@@ -25,25 +25,8 @@ public class JCPulseView: UIView {
         
         self.layer.addSublayer(self.pulseShapeLayer)
         
-        self.startDisplayLink()
-    }
-    
-    func stop() {
-        displayLink?.invalidate()
-        displayLink = nil
-    }
-    
-    private func startDisplayLink() {
-        self.startTime = CFAbsoluteTimeGetCurrent()
-        displayLink?.invalidate()
-        displayLink = CADisplayLink(target: self, selector: #selector(handleDisplayLink(displayLink:)))
-        displayLink?.add(to: RunLoop.current, forMode: .common)
-    }
-    
-    @objc func handleDisplayLink(displayLink: CADisplayLink) {
-        guard let startTime = self.startTime else { return }
-        let elapsed = CFAbsoluteTimeGetCurrent() - startTime
-        self.pulseShapeLayer.path = self.wave(at: elapsed).cgPath
+        
+        self.displayLinkManager.delegate = self
     }
     
     private func wave(at elapsed: Double)->UIBezierPath {
@@ -65,6 +48,11 @@ public class JCPulseView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // JCDisplayLinkManagerDelegate
+    public func displayLinkManagerUpdated(atTime time: Double, manager: JCDisplayLinkManager) {
+        self.pulseShapeLayer.path = self.wave(at: time).cgPath
     }
     
 }
