@@ -15,8 +15,9 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     private let pulseShapeLayer: JCPulseShapeLayer
     
     private var waveType: JCWaveType
+    private let degrees: JCWaveDegrees
     
-    public init(withWaveType waveType: JCWaveType, strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
+    public init(withWaveType waveType: JCWaveType, degrees: JCWaveDegrees, strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
         self.displayLinkManager = JCDisplayLinkManager()
         self.waveManager = JCWaveManager()
         self.pulseShapeLayer = JCPulseShapeLayer(
@@ -26,6 +27,7 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
         )
         
         self.waveType = waveType
+        self.degrees = degrees
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
@@ -40,7 +42,7 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     // JCDisplayLinkManagerDelegate
     public func displayLinkManagerUpdated(atTime time: Double, manager: JCDisplayLinkManager) {
-        self.pulseShapeLayer.path = self.waveManager.getWave(withType: .Alpha, usingTime: time, onPulse: self).cgPath
+        self.pulseShapeLayer.path = self.waveManager.getWave(usingType: self.waveType, degrees: self.degrees, time: time, onPulse: self).cgPath
     }
     
 }
