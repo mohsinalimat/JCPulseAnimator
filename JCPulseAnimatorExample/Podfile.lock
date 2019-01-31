@@ -1,0 +1,16 @@
+PODS:
+  - JCPulseAnimator (0.0.1)
+
+DEPENDENCIES:
+  - JCPulseAnimator (from `../../JCPulseAnimator`)
+
+EXTERNAL SOURCES:
+  JCPulseAnimator:
+    :path: "../../JCPulseAnimator"
+
+SPEC CHECKSUMS:
+  JCPulseAnimator: 420fa4ddf888491043883fb275ec88b9c86703a1
+
+PODFILE CHECKSUM: 87d6541d5970c8ccc1b9c4b9a4d73f5e429fc442
+
+COCOAPODS: 1.5.3

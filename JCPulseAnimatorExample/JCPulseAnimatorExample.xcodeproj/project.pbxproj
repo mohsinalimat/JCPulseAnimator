@@ -14,6 +14,7 @@
 		B03F554F220315550085CEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03F554D220315550085CEB1 /* LaunchScreen.storyboard */; };
 		B03F5568220315BD0085CEB1 /* JCPulseAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F55652203157F0085CEB1 /* JCPulseAnimator.framework */; };
 		B03F5569220315BD0085CEB1 /* JCPulseAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F55652203157F0085CEB1 /* JCPulseAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F99C2F9CC7401F080B8E60BD /* Pods_JCPulseAnimatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4452FBBB702BDDF7F4EB6520 /* Pods_JCPulseAnimatorExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4452FBBB702BDDF7F4EB6520 /* Pods_JCPulseAnimatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCPulseAnimatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		763767D6207B40DBCF3C89AB /* Pods-JCPulseAnimatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCPulseAnimatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCPulseAnimatorExample/Pods-JCPulseAnimatorExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A709EAFEBD392CD28E44E8B9 /* Pods-JCPulseAnimatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCPulseAnimatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCPulseAnimatorExample/Pods-JCPulseAnimatorExample.release.xcconfig"; sourceTree = "<group>"; };
 		B03F5541220315530085CEB1 /* JCPulseAnimatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCPulseAnimatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F5544220315530085CEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03F5546220315530085CEB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,18 +75,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03F5568220315BD0085CEB1 /* JCPulseAnimator.framework in Frameworks */,
+				F99C2F9CC7401F080B8E60BD /* Pods_JCPulseAnimatorExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062F7623548B4CF45BB04F23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4452FBBB702BDDF7F4EB6520 /* Pods_JCPulseAnimatorExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11A6F59EC64CE77D75455F7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				763767D6207B40DBCF3C89AB /* Pods-JCPulseAnimatorExample.debug.xcconfig */,
+				A709EAFEBD392CD28E44E8B9 /* Pods-JCPulseAnimatorExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B03F5538220315530085CEB1 = {
 			isa = PBXGroup;
 			children = (
 				B03F555F2203157F0085CEB1 /* JCPulseAnimator.xcodeproj */,
 				B03F5543220315530085CEB1 /* JCPulseAnimatorExample */,
 				B03F5542220315530085CEB1 /* Products */,
+				11A6F59EC64CE77D75455F7E /* Pods */,
+				062F7623548B4CF45BB04F23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B03F5553220315550085CEB1 /* Build configuration list for PBXNativeTarget "JCPulseAnimatorExample" */;
 			buildPhases = (
+				F59CB3C9182F0136CCDD37C8 /* [CP] Check Pods Manifest.lock */,
 				B03F553D220315530085CEB1 /* Sources */,
 				B03F553E220315530085CEB1 /* Frameworks */,
 				B03F553F220315530085CEB1 /* Resources */,
@@ -206,6 +231,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F59CB3C9182F0136CCDD37C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JCPulseAnimatorExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B03F553D220315530085CEB1 /* Sources */ = {
@@ -365,6 +415,7 @@
 		};
 		B03F5554220315550085CEB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 763767D6207B40DBCF3C89AB /* Pods-JCPulseAnimatorExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -383,6 +434,7 @@
 		};
 		B03F5555220315550085CEB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A709EAFEBD392CD28E44E8B9 /* Pods-JCPulseAnimatorExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
