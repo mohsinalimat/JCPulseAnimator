@@ -11,39 +11,29 @@ import UIKit
 
 public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     private let displayLinkManager: JCDisplayLinkManager
+    private let waveManager: JCWaveManager
     private let pulseShapeLayer: JCPulseShapeLayer
     
-    public init(withStrokeColor strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
+    private var waveType: JCWaveType
+    private let degrees: JCWaveDegrees
+    
+    public init(withWaveType waveType: JCWaveType, degrees: JCWaveDegrees, strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
         self.displayLinkManager = JCDisplayLinkManager()
+        self.waveManager = JCWaveManager()
         self.pulseShapeLayer = JCPulseShapeLayer(
             withStrokeColor: strokeColor ?? UIColor.black,
             fillColor: fillColor ?? UIColor.clear,
             lineWidth: lineWidth ?? 3.0
         )
+        
+        self.waveType = waveType
+        self.degrees = degrees
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.layer.addSublayer(self.pulseShapeLayer)
         
-        
         self.displayLinkManager.delegate = self
-    }
-    
-    private func wave(at elapsed: Double)->UIBezierPath {
-        let centerY = self.bounds.height / 2
-        let amplitude = CGFloat(30.0) - abs(fmod(CGFloat(elapsed), 3) - 1.5) * 40
-        
-        func f(_ x: Int)->CGFloat {
-            return self.bounds.width > 0 ? sin(((CGFloat(x) / self.bounds.width) + CGFloat(elapsed)) * 4 * .pi) * amplitude + centerY : 0
-        }
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: f(0)))
-        for x in stride(from: 0, to: Int(self.bounds.width + 9), by: 10) {
-            path.addLine(to: CGPoint(x: CGFloat(x), y: f(x)))
-        }
-        
-        return path
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,7 +42,7 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     // JCDisplayLinkManagerDelegate
     public func displayLinkManagerUpdated(atTime time: Double, manager: JCDisplayLinkManager) {
-        self.pulseShapeLayer.path = self.wave(at: time).cgPath
+        self.pulseShapeLayer.path = self.waveManager.getWave(usingType: self.waveType, degrees: self.degrees, time: time, onPulse: self).cgPath
     }
     
 }
