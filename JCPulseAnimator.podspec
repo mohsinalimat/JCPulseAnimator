@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author             = { "Juan Curti" => "juancurti22@gmail.com" }
   s.platform     = :ios, "11.0"
   s.source       = { :git => "https://github.com/jmcur/JCPulseAnimator.git", :tag => "#{s.version}" }
-  s.source_files  = "Classes/*.{h,m,swift}"
+  s.source_files  = "JCPulseAnimator/*.{h,m,swift}"
   s.exclude_files = "Classes/Exclude"
   s.swift_version = "4.2"
 
