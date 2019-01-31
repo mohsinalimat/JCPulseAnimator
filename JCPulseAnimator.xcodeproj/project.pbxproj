@@ -12,6 +12,7 @@
 		B03F552B220312520085CEB1 /* JCPulseAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = B03F551D220312520085CEB1 /* JCPulseAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B03F5535220312990085CEB1 /* JCPulseShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */; };
 		B03F5537220314590085CEB1 /* JCPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F5536220314590085CEB1 /* JCPulseView.swift */; };
+		B03F5570220318AA0085CEB1 /* JCDisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03F556F220318AA0085CEB1 /* JCDisplayLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		B03F552A220312520085CEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCPulseShapeLayer.swift; sourceTree = "<group>"; };
 		B03F5536220314590085CEB1 /* JCPulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCPulseView.swift; sourceTree = "<group>"; };
+		B03F556F220318AA0085CEB1 /* JCDisplayLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCDisplayLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				B03F551E220312520085CEB1 /* Info.plist */,
 				B03F5534220312990085CEB1 /* JCPulseShapeLayer.swift */,
 				B03F5536220314590085CEB1 /* JCPulseView.swift */,
+				B03F556F220318AA0085CEB1 /* JCDisplayLink.swift */,
 			);
 			path = JCPulseAnimator;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03F5570220318AA0085CEB1 /* JCDisplayLink.swift in Sources */,
 				B03F5535220312990085CEB1 /* JCPulseShapeLayer.swift in Sources */,
 				B03F5537220314590085CEB1 /* JCPulseView.swift in Sources */,
 			);
