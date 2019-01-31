@@ -14,8 +14,12 @@ public class JCPulseView: UIView {
     private var startTime: CFAbsoluteTime?
     private let pulseShapeLayer: JCPulseShapeLayer
     
-    init(withStrokeColor strokeColor: UIColor = UIColor.black, fillColor: UIColor = UIColor.clear, lineWidth: CGFloat = 3.0) {
-        self.pulseShapeLayer = JCPulseShapeLayer(withStrokeColor: strokeColor, fillColor: fillColor, lineWidth: lineWidth)
+    public init(withStrokeColor strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?) {
+        self.pulseShapeLayer = JCPulseShapeLayer(
+            withStrokeColor: strokeColor ?? UIColor.black,
+            fillColor: fillColor ?? UIColor.clear,
+            lineWidth: lineWidth ?? 3.0
+        )
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         

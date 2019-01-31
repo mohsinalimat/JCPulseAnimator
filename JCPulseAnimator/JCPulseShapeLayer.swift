@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal class JCPulseShapeLayer: CAShapeLayer {
+public class JCPulseShapeLayer: CAShapeLayer {
     private let strokingColor: UIColor
     private let fillingColor: UIColor
     private let customLineWidth: CGFloat
