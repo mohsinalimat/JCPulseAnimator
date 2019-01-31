@@ -46,12 +46,6 @@ public class JCWaveManager {
                 return pulse.bounds.width > 0 ? cos(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
             case .Tan:
                 return pulse.bounds.width > 0 ? tan(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
-            case .ArcSin:
-                return pulse.bounds.width > 0 ? asin(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
-            case .ArcCos:
-                return pulse.bounds.width > 0 ? acos(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
-            case .ArcTan:
-                return pulse.bounds.width > 0 ? atan(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
             }
         }
         
