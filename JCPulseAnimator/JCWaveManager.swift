@@ -29,17 +29,19 @@ public enum JCWaveDegrees {
 
 public class JCWaveManager {
     
-    public init() {
-        
+    private var type: JCWaveType
+    
+    public init(withType type: JCWaveType) {
+        self.type = type
     }
     
-    public func getWave(usingType type: JCWaveType, degrees: JCWaveDegrees, time: Double, onPulse pulse: JCPulseView) -> UIBezierPath {
+    public func getWave(usingDegrees degrees: JCWaveDegrees, time: Double, onPulse pulse: JCPulseView) -> UIBezierPath {
         let centerY = pulse.bounds.height / 2
         let amplitude = CGFloat(30.0) - abs(fmod(CGFloat(time), 3) - 1.5) * 40
         
         func f(_ x: Int)->CGFloat {
             
-            switch (type) {
+            switch (self.type) {
             case .Sin:
                 return pulse.bounds.width > 0 ? sin(((CGFloat(x) / pulse.bounds.width) + CGFloat(time)) * 4 * self.getDegrees(usingWaveDegrees: degrees)) * amplitude + centerY : 0
             case .Cos:
@@ -56,6 +58,10 @@ public class JCWaveManager {
         }
         
         return path
+    }
+    
+    public func changeWaveType(to waveType: JCWaveType) {
+        self.type = waveType
     }
     
     private func getDegrees(usingWaveDegrees waveDegrees: JCWaveDegrees) -> CGFloat {
