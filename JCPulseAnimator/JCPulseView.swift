@@ -56,13 +56,13 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
         self.pulseShapeLayer.animateFillColor(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
     }
     
+    public func displayLinkManagerUpdated(atTime time: Double) {
+        self.pulseShapeLayer.path = self.waveManager.getWave(usingDegrees: self.degrees, time: time, onPulse: self).cgPath
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // JCDisplayLinkManagerDelegate
-    public func displayLinkManagerUpdated(atTime time: Double, manager: JCDisplayLinkManager) {
-        self.pulseShapeLayer.path = self.waveManager.getWave(usingType: self.waveType, degrees: self.degrees, time: time, onPulse: self).cgPath
-    }
     
 }

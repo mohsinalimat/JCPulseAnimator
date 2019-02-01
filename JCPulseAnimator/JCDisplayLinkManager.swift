@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public protocol JCDisplayLinkManagerDelegate {
-    func displayLinkManagerUpdated(atTime time: Double, manager: JCDisplayLinkManager)
+    func displayLinkManagerUpdated(atTime time: Double)
 }
 
 public class JCDisplayLinkManager {
@@ -35,7 +35,7 @@ public class JCDisplayLinkManager {
     
     @objc func handleDisplayLink(displayLink: CADisplayLink) {
         let elapsed = CFAbsoluteTimeGetCurrent() - self.startTime
-        self.delegate?.displayLinkManagerUpdated(atTime: elapsed, manager: self)
+        self.delegate?.displayLinkManagerUpdated(atTime: elapsed)
     }
     
     func startDisplayLink() {
