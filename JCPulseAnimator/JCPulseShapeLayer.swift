@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /**
- Layer that handles both stroke and fill colors, the line width, and to change colors dinamically or statically.
+ Layer that handles both stroke and fill colors, the line width, and to change colors dynamically or statically.
  **/
 public class JCPulseShapeLayer: CAShapeLayer {
     
