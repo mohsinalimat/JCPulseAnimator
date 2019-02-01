@@ -24,11 +24,7 @@ public class JCDisplayLinkManager {
     public init() {
         self.startTime = CFAbsoluteTimeGetCurrent()
         
-        self.displayLink = CADisplayLink(target: self, selector: #selector(self.handleDisplayLink(displayLink:)))
-        
-        if let displayLink = self.displayLink {
-            displayLink.add(to: RunLoop.current, forMode: .common)
-        }
+        self.startDisplayLink()
         
     }
     
@@ -40,6 +36,16 @@ public class JCDisplayLinkManager {
     @objc func handleDisplayLink(displayLink: CADisplayLink) {
         let elapsed = CFAbsoluteTimeGetCurrent() - self.startTime
         self.delegate?.displayLinkManagerUpdated(atTime: elapsed, manager: self)
+    }
+    
+    func startDisplayLink() {
+        self.displayLink = CADisplayLink(target: self, selector: #selector(self.handleDisplayLink(displayLink:)))
+        
+        self.displayLink?.preferredFramesPerSecond = self.frequency
+        
+        if let displayLink = self.displayLink {
+            displayLink.add(to: RunLoop.current, forMode: .common)
+        }
     }
     
     func stopDisplayLink() {
