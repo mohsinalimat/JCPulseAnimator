@@ -24,6 +24,28 @@ public class JCPulseShapeLayer: CAShapeLayer {
         self.strokeColor = self.strokingColor.cgColor
         self.fillColor = self.fillingColor.cgColor
         self.lineWidth = self.customLineWidth
+        
+        let layer = CALayer()
+        layer.frame = self.bounds
+        self.addSublayer(layer)
+    }
+    
+    func animateStrokeColor(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
+        self.animate(WithKeyPath: "strokeColor", fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverses)
+    }
+    
+    func animateFillColor(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
+        self.animate(WithKeyPath: "fillColor", fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverses)
+    }
+    
+    private func animate(WithKeyPath keyPath: String, fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
+        let animColor = CABasicAnimation(keyPath: keyPath)
+        animColor.fromValue         = firstValue.cgColor
+        animColor.toValue           = lastValue.cgColor
+        animColor.duration          = CFTimeInterval(duration)
+        animColor.repeatCount       = 0
+        animColor.autoreverses      = autoreverses
+        self.add(animColor, forKey: keyPath)
     }
     
     required init?(coder aDecoder: NSCoder) {
