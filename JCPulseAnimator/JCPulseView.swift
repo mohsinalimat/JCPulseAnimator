@@ -36,11 +36,11 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
         self.displayLinkManager.delegate = self
     }
     
-    func startAnimation() {
+    public func startAnimation() {
         self.displayLinkManager.startDisplayLink()
     }
     
-    func stopAnimation() {
+    public func stopAnimation() {
         self.displayLinkManager.stopDisplayLink()
     }
     
