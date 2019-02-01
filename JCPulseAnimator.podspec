@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "JCPulseAnimator"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "Framework to display pulse and waves animations."
   s.description  = "Framework to display pulse and waves animations during a period of time or infinitely."
 
