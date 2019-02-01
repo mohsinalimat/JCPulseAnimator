@@ -36,7 +36,7 @@ public class JCDisplayLinkManager {
     /**
     Delegate that responds to JCDisplayLinkManagerDelegate.
      
-     - Method displayLinkManagerUpdated(didUpdateAtTime: Double)
+     - Requires: displayLinkManagerUpdated(didUpdateAtTime: Double)
     **/
     var delegate: JCDisplayLinkManagerDelegate?
     

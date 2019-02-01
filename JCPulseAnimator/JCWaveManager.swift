@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
+/**
+ Enum to choose the trigonometrical function to use.
+ **/
 public enum JCWaveType {
     case Sin
     case Cos
     case Tan
 }
 
+/**
+ Values that correspond to a value of PI. For the exact use of these values, refer to class JCWaveManager, method getDegrees(usingWaveDegrees waveDegrees: JCWaveDegrees)
+ **/
 public enum JCWaveDegrees {
     case positive360
     case positive270
@@ -27,14 +33,22 @@ public enum JCWaveDegrees {
     case negative360
 }
 
+/// Manager to draw the pulses according to the trigonometrical function related and the degrees associated.
 public class JCWaveManager {
     
+    /// Select the trigonometrical function that will be used to draw the pulse animation. Of the type JCWaveType, it can take values for Sin, Cos and Tan.
     private var type: JCWaveType
     
+    /**
+     Public constructor, which takes a JCWaveType type.
+     **/
     public init(withType type: JCWaveType) {
         self.type = type
     }
     
+    /**
+     Method that returns a path (UIBezierPath) according to the degrees we're using, the time elapsed from JCDisplayLinkManager, and the JCPulseView element to take references from.
+     **/
     public func getWave(usingDegrees degrees: JCWaveDegrees, time: Double, onPulse pulse: JCPulseView) -> UIBezierPath {
         let centerY = pulse.bounds.height / 2
         let amplitude = CGFloat(30.0) - abs(fmod(CGFloat(time), 3) - 1.5) * 40
@@ -60,10 +74,20 @@ public class JCWaveManager {
         return path
     }
     
+    /**
+     Method to change the wave type. Can be used in the middle of an animation or isolated.
+     
+     - Parameter waveType: Type of wave, of type JCWaveType, which at the moment can be Sin, Cos or Tan.
+     **/
     public func changeWaveType(to waveType: JCWaveType) {
         self.type = waveType
     }
     
+    /**
+     Method that takes a value from the enum JCWaveDegrees and returns a CGFloat.
+     
+     - Parameter waveDegrees: Degrees, value from JCWaveDegrees
+     **/
     private func getDegrees(usingWaveDegrees waveDegrees: JCWaveDegrees) -> CGFloat {
         switch (waveDegrees) {
         case .positive360: return .pi * 2
