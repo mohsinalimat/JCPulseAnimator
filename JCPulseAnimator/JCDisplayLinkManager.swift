@@ -19,6 +19,8 @@ public class JCDisplayLinkManager {
     
     var delegate: JCDisplayLinkManagerDelegate?
     
+    private var frequency: NSInteger = 60
+    
     public init() {
         self.startTime = CFAbsoluteTimeGetCurrent()
         
@@ -28,6 +30,11 @@ public class JCDisplayLinkManager {
             displayLink.add(to: RunLoop.current, forMode: .common)
         }
         
+    }
+    
+    public func setFrequency(frequency: NSInteger) {
+        self.frequency = frequency
+        self.displayLink?.preferredFramesPerSecond = self.frequency
     }
     
     @objc func handleDisplayLink(displayLink: CADisplayLink) {
