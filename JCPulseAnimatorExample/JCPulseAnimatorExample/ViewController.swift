@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         
         pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .purple, fillColor: nil, lineWidth: 3.0)
         
+        pulseView?.changePulseFrequency(withValue: 30)
+        
         self.view.addSubview(pulseView!)
         
         NSLayoutConstraint(item: pulseView!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 150).isActive = true
