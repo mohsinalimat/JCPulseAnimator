@@ -20,7 +20,7 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     /// Manager to draw the pulses according to the trigonometrical function related and the degrees associated.
     private let waveManager: JCWaveManager
     
-    /// Layer that handles both stroke and fill colors, the line width, and to change colors dinamically or statically.
+    /// Layer that handles both stroke and fill colors, the line width, and to change colors dynamically or statically.
     private let pulseShapeLayer: JCPulseShapeLayer
     
     /// Enum that returns degrees in PI. The value can be either positive or negative, between 90, 180, 270 and 360 degrees, apart of zero.
@@ -31,8 +31,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
      
      - Parameter waveType: Select the trigonometrical function that will be used to draw the pulse animation. Of the type JCWaveType, it can take values for Sin, Cos and Tan.
      - Parameter degrees: Choose a degree from the available degrees between -360 and 360 degrees. Of the type JCWaveDegrees, it can take values for either positive or negative 90, 180, 270 and 360 degrees, apart from zero.
-     - Parameter strokeColor: Choose the color for the line of the pulse graphic. The default value is black. **Note** that this can be changed dinamically with or without an animation.
-     - Parameter fillColor: Choose the fill color between the lines of the pulse graphic. The default value is clear. **Note** that this can be changed dinamically with or without an animation.
+     - Parameter strokeColor: Choose the color for the line of the pulse graphic. The default value is black. **Note** that this can be changed dynamically with or without an animation.
+     - Parameter fillColor: Choose the fill color between the lines of the pulse graphic. The default value is clear. **Note** that this can be changed dynamically with or without an animation.
      - Parameter lineWidth: Width of the lines of the graphic.
      
      **/
@@ -152,7 +152,7 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     /**
      Delegate from JCPulseView (Specific class is JCDisplayLinkManagerDelegate). This delegate method is called in every cycle created by the display link.
      **/
-    public func displayLinkManagerUpdated(atTime time: Double) {
+    public func displayLinkManagerUpdated(didUpdateAtTime time: Double) {
         self.pulseShapeLayer.path = self.waveManager.getWave(usingDegrees: self.degrees, time: time, onPulse: self).cgPath
     }
     
