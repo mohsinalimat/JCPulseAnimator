@@ -10,18 +10,31 @@ import UIKit
 import JCPulseAnimator
 
 class ViewController: UIViewController {
+    
+    var pulseView: JCPulseView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .black, fillColor: nil, lineWidth: 3.0)
+        pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .purple, fillColor: nil, lineWidth: 3.0)
         
-        self.view.addSubview(pulseView)
+        pulseView?.changePulseFrequency(withValue: 30)
         
-        NSLayoutConstraint(item: pulseView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 150).isActive = true
-        NSLayoutConstraint(item: pulseView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: pulseView, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: pulseView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0).isActive = true
+        self.view.addSubview(pulseView!)
+        
+        NSLayoutConstraint(item: pulseView!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 150).isActive = true
+        NSLayoutConstraint(item: pulseView!, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: pulseView!, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: pulseView!, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0).isActive = true
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let pulseView = self.pulseView {
+            pulseView.stopAnimation()
+        }
         
     }
 
