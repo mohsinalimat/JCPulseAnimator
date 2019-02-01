@@ -70,6 +70,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     /**
      Change the pulse frequency, which is by default on 60. **Note: ** To get different results, try to put a value between 0 and 20/30.
+     
+     - Parameter value: Value to change the refresh rate of the display. By default is 60.
      **/
     public func changePulseFrequency(withValue value: NSInteger) {
         self.displayLinkManager.setFrequency(frequency: value)
@@ -77,6 +79,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     /**
      Change the color of the graphic's lines instantly.
+     
+     - Parameter color: Color to change the stroke color to.
      **/
     public func changeStrokeColor(to color: UIColor) {
         self.pulseShapeLayer.changeStrokeColor(to: color)
@@ -84,6 +88,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     /**
      Change the color of the graphic's background (Between lines) instantly.
+     
+     - Parameter color: Color to change the background color to.
      **/
     public func changeFillColor(to color: UIColor) {
         self.pulseShapeLayer.changeFillColor(to: color)
@@ -91,6 +97,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     /**
      Change the line width of the pulse animation instantly.
+     
+     - Parameter lineWidth: New width to replace instantly the current graphic's line width for.
      **/
     public func changeLineWidth(to lineWidth: CGFloat) {
         self.pulseShapeLayer.changeLineWidth(to: lineWidth)
@@ -99,10 +107,10 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     /**
      Change the color of the graphic's lines with an animation, working with 2 colors and switching between these colors during a specific time.
      
-     -Parameter fromValue: First color from the animation. The original color can be used here.
-     -Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
-     -Parameter duration: Duration in CGFloat, in seconds
-     -Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+     - Parameter fromValue: First color from the animation. The original color can be used here.
+     - Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
      **/
     public func changeStrokeColorAnimated(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
         self.pulseShapeLayer.animateStrokeColor(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
@@ -111,10 +119,10 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     /**
      Change the color of the graphic's background with an animation, working with 2 colors and switching between these colors during a specific time.
      
-     -Parameter fromValue: First color from the animation. The original color can be used here.
-     -Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
-     -Parameter duration: Duration in CGFloat, in seconds
-     -Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+     - Parameter fromValue: First color from the animation. The original color can be used here.
+     - Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
      **/
     public func changeFillColorAnimated(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
         self.pulseShapeLayer.animateFillColor(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
@@ -123,10 +131,10 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     /**
      Change the line's width of the pulse animation during a specific amount of time..
      
-     -Parameter fromValue: First line width for the animation. The original width can be used here.
-     -Parameter toValue: Second line width for the animation. As fromValue's, the original width can be used here.
-     -Parameter duration: Duration in CGFloat, in seconds
-     -Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+     - Parameter fromValue: First line width for the animation. The original width can be used here.
+     - Parameter toValue: Second line width for the animation. As fromValue's, the original width can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
      **/
     public func changeLineWidthAnimated(fromValue firstValue: CGFloat, toValue lastValue: CGFloat, duration: CGFloat, autoreverse: Bool) {
         self.pulseShapeLayer.animateLineWidth(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
@@ -134,6 +142,8 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
     
     /**
      Method to change the wave type. Can be used in the middle of an animation or isolated.
+     
+     - Parameter waveType: Type of wave, of type JCWaveType, which at the moment can be Sin, Cos or Tan.
      **/
     public func changeWaveType(to waveType: JCWaveType) {
         self.waveManager.changeWaveType(to: waveType)
