@@ -48,6 +48,14 @@ public class JCPulseView: UIView, JCDisplayLinkManagerDelegate {
         self.displayLinkManager.setFrequency(frequency: value)
     }
     
+    public func changeStrokeColor(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
+        self.pulseShapeLayer.animateStrokeColor(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
+    }
+    
+    public func changeFillColor(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool) {
+        self.pulseShapeLayer.animateFillColor(fromValue: firstValue, toValue: lastValue, duration: duration, autoreverse: autoreverse)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
