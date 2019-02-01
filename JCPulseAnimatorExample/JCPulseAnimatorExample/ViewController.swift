@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pulseView = JCPulseView(withWaveType: JCWaveType.ArcSin, degrees: JCWaveDegrees.positive360, strokeColor: .black, fillColor: nil, lineWidth: 3.0)
+        let pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .black, fillColor: nil, lineWidth: 3.0)
         
         self.view.addSubview(pulseView)
         
