@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name         = "JCPulseAnimator"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Framework to display pulse and waves animations."
   s.description  = "Framework to display pulse and waves animations during a period of time or infinitely."
 
   s.homepage     = "https://github.com/jmcur/JCPulseAnimator.git"
   s.license      = "MIT"
   s.author             = { "Juan Curti" => "juancurti22@gmail.com" }
-  s.platform     = :ios, "11.0"
+  s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/jmcur/JCPulseAnimator.git", :tag => "#{s.version}" }
   s.source_files  = "JCPulseAnimator/*.{h,m,swift}"
   s.exclude_files = "Classes/Exclude"
