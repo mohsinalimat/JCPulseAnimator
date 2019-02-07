@@ -99,7 +99,7 @@ public class JCPulseShapeLayer: CAShapeLayer {
         animWidth.fromValue         = firstValue
         animWidth.toValue           = lastValue
         animWidth.duration          = CFTimeInterval(duration)
-        animWidth.repeatCount       = 0
+        animWidth.repeatCount       = .infinity
         animWidth.autoreverses      = autoreverses
         self.add(animWidth, forKey: "lineWidth")
     }
@@ -118,7 +118,7 @@ public class JCPulseShapeLayer: CAShapeLayer {
         animColor.fromValue         = firstValue.cgColor
         animColor.toValue           = lastValue.cgColor
         animColor.duration          = CFTimeInterval(duration)
-        animColor.repeatCount       = 0
+        animColor.repeatCount       = .infinity
         animColor.autoreverses      = autoreverses
         self.add(animColor, forKey: keyPath)
     }

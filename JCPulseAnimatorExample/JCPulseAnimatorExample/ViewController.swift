@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .purple, fillColor: nil, lineWidth: 3.0)
+        pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .green, fillColor: nil, lineWidth: 3.0)
         
         pulseView?.changePulseFrequency(withValue: 30)
         
@@ -27,6 +27,13 @@ class ViewController: UIViewController {
         NSLayoutConstraint(item: pulseView!, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: pulseView!, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0).isActive = true
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let pulseView = self.pulseView else { return }
+        pulseView.changeStrokeColorAnimated(fromValue: UIColor.green, toValue: UIColor.red, duration: 1.0, autoreverse: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
