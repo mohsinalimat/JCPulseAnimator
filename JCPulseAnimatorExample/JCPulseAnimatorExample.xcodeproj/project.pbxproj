@@ -243,13 +243,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JCPulseAnimatorExample/Pods-JCPulseAnimatorExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JCPulseAnimator/JCPulseAnimator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JCPulseAnimator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
