@@ -1,5 +1,8 @@
-# JCPulseAnimator 
-## [Open Pull Requests, Come and Contribute!]
+<p align="center">
+<img src="https://github.com/jmcur/Designs_And_Sketch_Files/blob/master/JCPulseAnimatorLogo%403x.png" />
+</p>
+
+*Open Pull Requests, Come and Contribute!*
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jmcur/JCPulseAnimator/blob/master/LICENSE) 
 [![Generic badge](https://img.shields.io/badge/Release-0.0.6-green.svg)](https://github.com/jmcur/JCPulseAnimator/releases) ![Generic badge](https://img.shields.io/badge/Cocoapods-Yes-green.svg) ![Generic badge](https://img.shields.io/badge/Carthage-No-red.svg)
