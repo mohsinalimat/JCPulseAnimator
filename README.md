@@ -20,6 +20,11 @@ This framework generates animated waves using trigonometrical functions such as 
 [● Contribution](https://github.com/jmcur/JCPulseAnimator#contribution)  
 [● Team](https://github.com/jmcur/JCPulseAnimator#team)  
 
+### JCPulseAnimator in Action
+| Sin 90º Freq.: 60 | Cos 90º Freq.: 60 | Tan 90º Freq.: 60 | Sin 360º Freq.: 20 | Sin 360º Freq.: 60 |
+| ------- | ------- | ------- | -------- | -------- |
+| ![](https://media.giphy.com/media/8mz9Ozfvcq0LxyF8X1/giphy.gif) | ![](https://media.giphy.com/media/4ZcWgMyipycB2Xiihq/giphy.gif) | ![](https://media.giphy.com/media/28cSuq3EN3efuGmgiP/giphy.gif) | ![](https://media.giphy.com/media/20OQacF9BX8bKnn1Dh/giphy.gif) | ![](https://media.giphy.com/media/4ZvFXWs6FoG0Z6iy4c/giphy.gif) |
+
 ## Why use JCPulseAnimator?
 It's extremely easy and the interface it provides makes even more easier to draw pulse animations. The code is well-documented itself, so the learning curve shouldn't be aggressive.
 
