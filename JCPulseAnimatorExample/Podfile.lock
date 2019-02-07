@@ -1,16 +1,16 @@
 PODS:
-  - JCPulseAnimator (0.0.1)
+  - JCPulseAnimator (0.0.6)
 
 DEPENDENCIES:
-  - JCPulseAnimator (from `../../JCPulseAnimator`)
+  - JCPulseAnimator (~> 0.0.6)
 
-EXTERNAL SOURCES:
-  JCPulseAnimator:
-    :path: "../../JCPulseAnimator"
+SPEC REPOS:
+  https://github.com/jmcur/JCPulseAnimator.git:
+    - JCPulseAnimator
 
 SPEC CHECKSUMS:
-  JCPulseAnimator: 420fa4ddf888491043883fb275ec88b9c86703a1
+  JCPulseAnimator: e35861d8bbce03327b1ab6201d05fb311bc6a22c
 
-PODFILE CHECKSUM: 87d6541d5970c8ccc1b9c4b9a4d73f5e429fc442
+PODFILE CHECKSUM: c5a20868f8b49cd29df1c02a80c2d24fe1387b32
 
 COCOAPODS: 1.5.3

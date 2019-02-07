@@ -152,6 +152,7 @@
 				B03F553E220315530085CEB1 /* Frameworks */,
 				B03F553F220315530085CEB1 /* Resources */,
 				B03F556C220315BE0085CEB1 /* Embed Frameworks */,
+				1C557850D020A03791D2A4A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +234,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C557850D020A03791D2A4A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JCPulseAnimatorExample/Pods-JCPulseAnimatorExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JCPulseAnimator/JCPulseAnimator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JCPulseAnimator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JCPulseAnimatorExample/Pods-JCPulseAnimatorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F59CB3C9182F0136CCDD37C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
