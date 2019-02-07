@@ -1,4 +1,8 @@
-# JCPulseAnimator
+# JCPulseAnimator 
+## [Open Pull Requests, Come and Contribute!]
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jmcur/JCPulseAnimator/blob/master/LICENSE) 
+[![Generic badge](https://img.shields.io/badge/Release-0.0.6-green.svg)](https://github.com/jmcur/JCPulseAnimator/releases) ![Generic badge](https://img.shields.io/badge/Cocoapods-Yes-green.svg) ![Generic badge](https://img.shields.io/badge/Carthage-No-red.svg)
 
 This framework generates animated waves using trigonometrical functions such as sine, cosine and tangent. You can configure the stroke color, the background color, the frequency in which the graphic is updated. You can even change dynamically colors, line width, and another parameters.
 
