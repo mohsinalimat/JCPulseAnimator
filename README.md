@@ -1,5 +1,8 @@
-# JCPulseAnimator 
-## [Open Pull Requests, Come and Contribute!]
+<p align="center">
+<img src="https://github.com/jmcur/Designs_And_Sketch_Files/blob/master/JCPulseAnimatorLogo%403x.png" />
+</p>
+
+*Open Pull Requests, Come and Contribute!*
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/jmcur/JCPulseAnimator/blob/master/LICENSE) 
 [![Generic badge](https://img.shields.io/badge/Release-0.0.6-green.svg)](https://github.com/jmcur/JCPulseAnimator/releases) ![Generic badge](https://img.shields.io/badge/Cocoapods-Yes-green.svg) ![Generic badge](https://img.shields.io/badge/Carthage-No-red.svg)
@@ -16,6 +19,11 @@ This framework generates animated waves using trigonometrical functions such as 
 [● Changelog](https://github.com/jmcur/JCPulseAnimator#changelog)  
 [● Contribution](https://github.com/jmcur/JCPulseAnimator#contribution)  
 [● Team](https://github.com/jmcur/JCPulseAnimator#team)  
+
+### JCPulseAnimator in Action
+| Sin 90º Freq.: 60 | Cos 90º Freq.: 60 | Tan 90º Freq.: 60 | Sin 360º Freq.: 20 | Sin 360º Freq.: 60 |
+| ------- | ------- | ------- | -------- | -------- |
+| ![](https://media.giphy.com/media/8mz9Ozfvcq0LxyF8X1/giphy.gif) | ![](https://media.giphy.com/media/4ZcWgMyipycB2Xiihq/giphy.gif) | ![](https://media.giphy.com/media/28cSuq3EN3efuGmgiP/giphy.gif) | ![](https://media.giphy.com/media/20OQacF9BX8bKnn1Dh/giphy.gif) | ![](https://media.giphy.com/media/4ZvFXWs6FoG0Z6iy4c/giphy.gif) |
 
 ## Why use JCPulseAnimator?
 It's extremely easy and the interface it provides makes even more easier to draw pulse animations. The code is well-documented itself, so the learning curve shouldn't be aggressive.
