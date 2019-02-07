@@ -7,7 +7,15 @@
 This framework generates animated waves using trigonometrical functions such as sine, cosine and tangent. You can configure the stroke color, the background color, the frequency in which the graphic is updated. You can even change dynamically colors, line width, and another parameters.
 
 ## Table of Contents
-[● Why use JCPulseAnimator](https://github.com/jmcur/JCPulseAnimator#-why-use-jcpulseanimator)  
+[● Why use JCPulseAnimator](https://github.com/jmcur/JCPulseAnimator#why-use-jcpulseanimator)  
+[● Requirements](https://github.com/jmcur/JCPulseAnimator#requirements)  
+[● Features](https://github.com/jmcur/JCPulseAnimator#features)  
+[● Quick Start](https://github.com/jmcur/JCPulseAnimator#quick-start)  
+[● Installation](https://github.com/jmcur/JCPulseAnimator#installation)  
+[● Usage](https://github.com/jmcur/JCPulseAnimator#usage)  
+[● Changelog](https://github.com/jmcur/JCPulseAnimator#changelog)  
+[● Contribution](https://github.com/jmcur/JCPulseAnimator#contribution)  
+[● Team](https://github.com/jmcur/JCPulseAnimator#team)  
 
 ## Why use JCPulseAnimator?
 It's extremely easy and the interface it provides makes even more easier to draw pulse animations. The code is well-documented itself, so the learning curve shouldn't be aggressive.
