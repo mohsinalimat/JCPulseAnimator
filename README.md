@@ -71,3 +71,6 @@ class ViewController: UIViewController {
 
 }
 ```
+
+## Changelog
+ - Version 0.0.6: Working library, with the ability to start and stop the animation. To change fill's and stroke's colors as well as the line width. Also the line is now configurable with sin, cos and tan, and also the degrees to calculate the wave frequency. Now you can also change the wave type (sin, cos or tan) dynamically, so your pulse animation can be customized and unique.
