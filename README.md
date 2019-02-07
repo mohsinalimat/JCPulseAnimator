@@ -10,3 +10,34 @@ The framework is built for iOS 10.0 and above. It was made at a first level in S
 
 ## Quick Start
 There's an example project where you can see (Really and extreme easily, with a few lines of code) how JCPulseAnimator works. Feel free to change values and play with it!
+
+## Installation
+
+## Installation
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate JCPulseAnimator into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/jmcur/JCPulseAnimator.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+  pod 'JCPulseAnimator', '~> 0.0.6'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
