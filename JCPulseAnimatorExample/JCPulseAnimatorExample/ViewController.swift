@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         pulseView = JCPulseView(withWaveType: JCWaveType.Sin, degrees: JCWaveDegrees.positive90, strokeColor: .green, fillColor: nil, lineWidth: 3.0)
         
-        pulseView?.changePulseFrequency(withValue: 30)
+        pulseView?.changePulseFrequency(withValue: 60)
         
         self.view.addSubview(pulseView!)
         
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         guard let pulseView = self.pulseView else { return }
-        pulseView.changeStrokeColorAnimated(fromValue: UIColor.green, toValue: UIColor.red, duration: 1.0, autoreverse: true)
+        pulseView.changeStrokeColorAnimated(fromValue: UIColor.green, toValue: UIColor.red, duration: 10.0, autoreverse: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
