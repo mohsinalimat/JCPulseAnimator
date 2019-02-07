@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pulseView = JCPulseView(withWaveType: JCWaveType.Cos, degrees: JCWaveDegrees.positive360, strokeColor: .green, fillColor: nil, lineWidth: 3.0)
+        pulseView = JCPulseView(withWaveType: JCWaveType.Sin, degrees: JCWaveDegrees.positive90, strokeColor: .green, fillColor: nil, lineWidth: 3.0)
         
         pulseView?.changePulseFrequency(withValue: 30)
         
