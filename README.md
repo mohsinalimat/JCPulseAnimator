@@ -24,7 +24,14 @@ It's extremely easy and the interface it provides makes even more easier to draw
 The framework is built for iOS 10.0 and above. It was made at a first level in Swift 3, but since it will be deprecated soon by Apple, it was developed using Swift 4.2.
 
 ## Features
-
+- [X] Animated Waves
+- [X] Option for the animation to start and stop manually.
+- [X] Different waves according to the trigonometrical functions sin, cos and tan.
+- [ ] Different waves according to the inverse trigonometrical functions arcsin, arccos and arctan.
+- [X] Change degrees of the graph dynamically.
+- [X] Ability to change the trigonometrical function dynamically.
+- [X] Add colors to background or line (Static or with animation).
+- [X] Change graph line width (Static or with animation).
 
 ## Quick Start
 There's an example project where you can see (Really and extreme easily, with a few lines of code) how JCPulseAnimator works. Feel free to change values and play with it!
