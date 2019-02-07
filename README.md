@@ -74,3 +74,12 @@ class ViewController: UIViewController {
 
 ## Changelog
  - Version 0.0.6: Working library, with the ability to start and stop the animation. To change fill's and stroke's colors as well as the line width. Also the line is now configurable with sin, cos and tan, and also the degrees to calculate the wave frequency. Now you can also change the wave type (sin, cos or tan) dynamically, so your pulse animation can be customized and unique.
+ 
+## Contribution
+We'd love for you to contribute to JCPulseAnimator. Read the ``License``, and start with pull requests, we wait for you!
+
+## Team
+The current working team for JCPulseAnimator is:
+ - [Juan Curti](https://github.com/jmcur)
+
+Feel free to report any issues!
