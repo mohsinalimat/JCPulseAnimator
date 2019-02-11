@@ -101,6 +101,93 @@ class ViewController: UIViewController {
 }
 ```
 
+### Methods
+ - **init(withWaveType waveType: JCWaveType, degrees: JCWaveDegrees, strokeColor: UIColor?, fillColor: UIColor?, lineWidth: CGFloat?)**
+ ```
+ Public constructor to access JCPulseView. It takes a few arguments, some of them with default value.
+     
+     - Parameter waveType: Select the trigonometrical function that will be used to draw the pulse animation. Of the type JCWaveType, it can take values for Sin, Cos and Tan.
+     - Parameter degrees: Choose a degree from the available degrees between -360 and 360 degrees. Of the type JCWaveDegrees, it can take values for either positive or negative 90, 180, 270 and 360 degrees, apart from zero.
+     - Parameter strokeColor: Choose the color for the line of the pulse graphic. The default value is black. **Note** that this can be changed dynamically with or without an animation.
+     - Parameter fillColor: Choose the fill color between the lines of the pulse graphic. The default value is clear. **Note** that this can be changed dynamically with or without an animation.
+     - Parameter lineWidth: Width of the lines of the graphic.
+```
+
+- **startAnimation()**
+```
+Method to start the animation if it was paused before.
+```
+
+- **stopAnimation()**
+```
+Method to stop the animation. Can be restarted using the function startAnimation()
+```
+
+- **changePulseFrequency(withValue value: NSInteger)**
+```
+Change the pulse frequency, which is by default on 60. **Note: ** To get different results, try to put a value between 0 and 20/30.
+     
+     - Parameter value: Value to change the refresh rate of the display. By default is 60.
+```
+
+- **changeStrokeColor(to color: UIColor)**
+```
+Change the color of the graphic's lines instantly.
+     
+     - Parameter color: Color to change the stroke color to.
+```
+
+- **changeFillColor(to color: UIColor)**
+```
+Change the color of the graphic's background (Between lines) instantly.
+     
+     - Parameter color: Color to change the background color to.
+```
+
+- **changeLineWidth(to lineWidth: CGFloat)**
+```
+Change the line width of the pulse animation instantly.
+     
+     - Parameter lineWidth: New width to replace instantly the current graphic's line width for.
+```
+
+- **changeStrokeColorAnimated(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool)**
+```
+Change the color of the graphic's lines with an animation, working with 2 colors and switching between these colors during a specific time.
+     
+     - Parameter fromValue: First color from the animation. The original color can be used here.
+     - Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+```
+
+- **changeFillColorAnimated(fromValue firstValue: UIColor, toValue lastValue: UIColor, duration: CGFloat, autoreverse: Bool)**
+```
+Change the color of the graphic's background with an animation, working with 2 colors and switching between these colors during a specific time.
+     
+     - Parameter fromValue: First color from the animation. The original color can be used here.
+     - Parameter toValue: Second color from the animation. As fromValue's, the original color can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+```
+
+- **changeLineWidthAnimated(fromValue firstValue: CGFloat, toValue lastValue: CGFloat, duration: CGFloat, autoreverse: Bool)**
+```
+Change the line's width of the pulse animation during a specific amount of time..
+     
+     - Parameter fromValue: First line width for the animation. The original width can be used here.
+     - Parameter toValue: Second line width for the animation. As fromValue's, the original width can be used here.
+     - Parameter duration: Duration in CGFloat, in seconds
+     - Parameter autoreverse: Boolean to specify if the animation should be autoreversed or not.
+```
+
+- **changeWaveType(to waveType: JCWaveType)**
+```
+Method to change the wave type. Can be used in the middle of an animation or isolated.
+     
+     - Parameter waveType: Type of wave, of type JCWaveType, which at the moment can be Sin, Cos or Tan.
+```     
+
 ## Changelog
  - Version 0.0.6: Working library, with the ability to start and stop the animation. To change fill's and stroke's colors as well as the line width. Also the line is now configurable with sin, cos and tan, and also the degrees to calculate the wave frequency. Now you can also change the wave type (sin, cos or tan) dynamically, so your pulse animation can be customized and unique.
  
