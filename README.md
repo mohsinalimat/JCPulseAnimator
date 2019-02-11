@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/jmcur/Designs_And_Sketch_Files/blob/master/JCPulseAnimatorLogo%403x.png" />
+<img src="https://i.postimg.cc/mrqSvvkW/JCPulse-Animator-Logo-3x.png" />
 </p>
 
 *Open Pull Requests, Come and Contribute!*
